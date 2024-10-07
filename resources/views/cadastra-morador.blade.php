@@ -1,0 +1,40 @@
+@extends('layout')
+@section('content')
+''
+<div class="container mt-5">
+        <h2>Cadastrar Morador</h2>
+        <form method="post" action="{{route('cadastra-morador',$registrosMorador->idMorador)}}">
+            @csrf
+            @method('put')
+            <div class="form-group">
+                <label for="nomeMorador">Nome do Morador:</label>
+                <input type="text" class="form-control" id="nomeMorador" name="nomeMorador" value="{{($registrosMorador->nomeMorador)}}" placeholder="Digite o nome do Morador" required>
+            </div>
+            <div class="form-group">
+                <label for="rgMorador">RG do Morador:</label>
+                <input type="text" class="form-control" id="rgMorador" name="rgMorador" value="{{($registrosMorador->rgMorador)}}" placehoder="digite o Rg do Morador"required>
+            </div>
+            <div class="form-group">
+                <label for="cpfMorador">Cpf do Morador:</label>
+                <input type="text" class="form-control" id="cpfMorador" name="cpfMorador" value="{{($registrosMorador->cpfMorador)}}"placeholder="Digite o cpf do Morador" required>
+</div>
+            <div class="form-group">
+                <label for="aptoMorador">Apartamento do Morador :</label>
+                <input type="text" class="form-control" id="aptoMorador" name="aptoMorador" value="{{($registrosMorador->aptoMorador)}}"placeholder="Digite o bloco e apartamento  do morador" required>
+                </div>
+            <div class="form-group">
+                <label for="telefoneMorador">telefone do Morador :</label>
+                <input type="text" class="form-control" id="telefoneMorador" name="telefoneMorador" value="{{($registrosMorador->telefoneMorador)}}"placeholder="Digite o telefone do morador" required>
+                </div>
+                <div class="form-group">
+                <label for="emailMorador">email do Morador :</label>
+                <input type="text" class="form-control" id="emailMorador" name="emailMorador" value="{{($registrosMorador->emailMorador)}}"placeholder="Digite o email do morador" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar Morador</button>
+        </form>
+    </div>
+ 
+@endsection
+
+ 
