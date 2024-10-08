@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
-''
+<body style="background-image: url('assets/fundo.jpg'); background-size: cover; background-position: center; margin: 0; height: 100vh;">
+
 <div class="container mt-5">
         <h2>Alterar registros do Morador</h2>
         <form method="post" action="{{route('altera-morador',$registrosMorador->idMorador)}}">

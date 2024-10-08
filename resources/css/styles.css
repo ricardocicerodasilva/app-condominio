@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #f8f9fa; /* Cor de fundo da navbar */
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #007bff; /* Cor do texto dos links */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Cor do texto ao passar o mouse */
+    font-weight: bold;
+}
+
+h1 {
+    color: green;
+    font-size: 36px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.img-condominio {
+    max-width: 100%; /* Faz a imagem se ajustar ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Arredonda os cantos */
+    display: block; /* Centraliza a imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}

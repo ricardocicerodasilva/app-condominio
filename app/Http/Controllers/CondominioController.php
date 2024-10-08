@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\condominio;
+use App\Models\Condominio;
 use Illuminate\Support\Facades\Redirect;
 
 class CondominioController extends Controller
@@ -11,14 +11,14 @@ class CondominioController extends Controller
     //para mostrara a tela administrativa
 
     public function MostrarHome(){
-        return View ('homeadm');
+        return view ('homeadm');
     }
 
 
 // para mostrar tela de cadastro de condominio
 
 public function MostrarCadastroMorador(){
-    return View ('cadastra-morador');
+    return view ('cadastra-morador');
 }
 
 // para salvar os registros na tabela condominio
@@ -33,18 +33,18 @@ public function CadastrarMorador(Request $request){
         'telefoneMorador'=>'string|required',
         'emailMorador'=>'string|required',
     ]);
-    condominio::create($registros);
+    Condominio::create($registros);
     return Redirect::route('home-adm');
 }
 
 // para apagar os registros da tabela de eventos
-public function destroy(condominio $id){
+public function destroy(Condominio $id){
     $id->delete();
     return Redirect::route('home-adm');
     }
     //para alterar os registroa na tabela decondominio
 
-    public function Update(condominio $id, Request $request){
+    public function Update(Condominio $id, Request $request){
         $registros = $request->validate([
            'nomeMorador'=>'string|required',
         'cpfMorador'=>'string|required',
@@ -59,20 +59,23 @@ public function destroy(condominio $id){
         return Redirect::route('home-adm');
 
     }
-    // para mostrar somente oscondominio por codigo
-    public function MostrarMoradorCodigo(Eventos $id){
-        return View('altera-morador',['registrosMorador'=>$id]);
+    // para mostrar somente os moradores por codigo
+    public function MostrarMoradorCodigo(Condominio $id){
+        return view('altera-morador',['registrosMorador'=>$id]);
     }
 
-    //para buscar os condominio por nome
-    public function MostraMoradorNome(Request $request){
-        $registros =condominio::query();
-        $registros->when($request->nomeEvento,function($query,$valor){
-            $query->where('nomeMorador','like','%'.$valor.'%');
-        });
-        $todosRegistros=$registros->get();
-        return View ('listaMorador',['registrosMorador'=>$todosRegistros]);
-
+    public function MostraMoradorNome(Request $request) {
+        $registros = Condominio::query();
+        
+        if ($request->filled('morador')) {
+            $registros->where('nomeMorador', 'like', '%' . $request->morador . '%');
+        }
+        
+        $todosRegistros = $registros->get();
+        return view('lista-morador', ['registrosMorador' => $todosRegistros]);
     }
+    
+    }
+    
 
-}
+    
