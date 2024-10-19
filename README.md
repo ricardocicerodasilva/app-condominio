@@ -45,7 +45,11 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[DevSquad](https://devsquad.com/hire-laravel-developers)**
 - **[Jump24](https://jump24.co.uk)**
 - **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
+- **[Active Logic](https://activelogic.com)**![4](https://github.com/user-attachments/assets/23ec23fe-be6f-49ad-b34b-ac7814b4d98d)
+![3](https://github.com/user-attachments/assets/83e2648f-b3b2-4d92-b4d0-f8359d6a57ef)
+![2](https://github.com/user-attachments/assets/04f97ed2-800d-4882-8ccf-0edb42aaa221)
+![1](https://github.com/user-attachments/assets/e519944e-5326-4508-8e8e-3b04eb57b2b6)
+
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
@@ -64,3 +68,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+![4](https://github.com/user-attachments/assets/7c030854-d20d-4d4b-9310-69fd78c0f1f4)
+![3](https://github.com/user-attachments/assets/191c0116-428f-4af7-b1d2-a783dcaa38e8)
+![2](https://github.com/user-attachments/assets/bf95e705-489c-4450-ac43-5fb241bc7296)
+![1](https://github.com/user-attachments/assets/36124807-62b4-4b94-a271-3fe8b1e93cfe)
+
